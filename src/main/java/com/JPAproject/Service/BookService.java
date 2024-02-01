@@ -48,5 +48,15 @@ public class BookService {
 		
 	}
 
+	public BookEntity deleteBook(int id) {
+		// TODO Auto-generated method stub
+		this.bookRepositary.deleteById(id);
+		return null;
+	}
+
+	
+
+	
+
 	
 }

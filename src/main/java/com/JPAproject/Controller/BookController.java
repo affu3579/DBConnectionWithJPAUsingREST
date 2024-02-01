@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.JPAproject.Entity.BookEntity;
 import com.JPAproject.Service.BookService;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -44,6 +46,12 @@ public class BookController {
 		System.out.println("method called");
 		return this.bookService.updateBook(id,entity);
 	}
+	
+	@DeleteMapping("/delete/{id}")
+	public BookEntity deleteBook(@PathVariable int id)
+	{
+		return this.bookService.deleteBook(id);
+	}	
 	
 
 }
